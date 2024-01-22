@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta name="author"   content="joshua hart">
+    <meta name="description" content=" Week 2 demo">
+
+    <title>W2 | demo</title>
+    <style>
+        /*in here we write css*/
+        /*selecting Elements in css & js/
+            selector {
+                property:value;
+                property:value;
+            }
+            
+            ways to select:
+                *by element type (all elemnets of type are styled)
+                *by ID name (only that element is styled)
+                *by class name (only elements in that class are styled)
+        */
+       
+        /*by element*/
+        
+            /*all div elemnets will have the below styles*/
+            
+            border:1px solid black
+            margin:10px; /*adds space between border & other elements, all 4 sides*/
+            padding:10px: /*adds space between elemnet content & border, all 4 sides*/
+    </style>
+    
+    
+    
+</head>
+<body>
+    <!--Wrapper - wraps around all content -->
+    <div id="wrapper">
+
+        <!--HEADER-->   
+        <div id=" header" class="bg">
+            <h1>week 2 Demo</h1>  <!--only 1 h1 per page - ESO-->
+            <h2>Attributs, <i>links</i>, and Images</h2>
+
+        </div>
+
+            <!--NAV BAR-->
+            <div id="nav">
+
+            <!--xternal links: linls outside of our website-->
+            <a href="https://www.meca.edu" target="_blank">visit Meca!</a>
+            
+            <br>
+
+            <!-- internal links: links to pages inside of our site (relative paths)-->
+            <a href="text.txt">Open my text file</a>
+           
+            <!-- internal jumos links: jumps to asection based on #id in current page-->
+            <a href="#bio">Bio</a>
+            <a href="#schools">Schools</a>
+            <a href="#hobbies">Hobbird</a>  
+            
+            <br>
+
+            <a href="#footer">Bottom of page!</a>
+
+            </div>
+
+            <!--BIO-->
+            <div id="bio">
+
+                <h2>My Bio - All about me</>
+
+                    <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>   <!--word--wrap use alt+z-->
+
+            </div>
+
+            <!--SCHOOLS-->
+            <div id="schools">
+
+                <h2>My schooling</h2>
+
+                <ol>
+                    <li>neit - MSIT -2023
+                
+                </ol>
+
+
+                <!--images:require src and all attributes-->
+                <!--absolute paths: using images from other sites-->
+                <img src= "https://images.ctfassets.net/usf1vwtuqyxm/40Sp4ysyqcYKkQSwWG8WI6/8fa8b6ffdb3490d62c722d056b8bec48/Dragon-calendar-carousel.jpg?fm=jpg&q=70&w=2560" width="500">
+
+                <!-- Relative paths: using images from current sites root folder-->
+                <img src="images/meca.jpg" alt="porteous building at sunset" width="500">
+
+            </div>
+
+            <!--HOBBIES-->
+            <div id=" hobbies">
+
+                <h2>Things i like to Do</h2>
+                
+                <!--unordered list-->
+                <ul>
+                    <li>game og thrones!</li>
+                    <li>Reading</li>
+                    <li>Play sports</li>
+                </ul>
+
+                <img src="images/stormsEnd.jpg" alt="storm end castle" width="500">
+
+            </div>
+    
+            <!--FOOTER-->
+            <div id=" footer" class="bg" style="test-align;center">
+                
+                <a href="#header">Back to top!</a>
+                <p>&copy; joshua hart |SE111.02 | 2024</p>
+                
+                <!--include validation screenshot Below-->
+                <img src="images/valid.png" alt="validation screenshoot" width="100%">
+
+        </div>
+
+    <div>
+
+</body>
+</html>
