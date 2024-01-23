@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="joshua hart" >
+    <meta name="description" content="BIO" >
+
+    <title>Bio</title>
+
+    <!--in-document styling-->
+    <style>
+        /*in here we must write in CSS*/
+         /*SELECTING in CSS & Javascript: select specific element(s) on a page
+
+        */
+
+        div { /*applies to ALL divs in the page*/
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+            margin:5px;/*adds 5px of space between elements (space added outside of border)*/
+        }
+
+        #wrapper {/*# specifies ID name, only applies to single element with that ID */
+
+            background-color:white;
+
+        }
+
+        #nav, #footer {/*can provide list or collection of elements to select*/
+            background-color:rgb(200, 200, 200);
+        }
+
+        a {/*styles all a (link) tags in page*/
+            text-decoration: none; /*removes the underline*/
+            font-size:20px;
+            margin-right:25px; /*adds 25 px of space to the right OF EACH link*/
+        }
+
+        /*4 default states --> :link, :hover, :active, :visited*/ 
+        a:hover {
+            color:teal;
+        }
+
+        #footer {
+            font-size:10px;
+            text-align:center;
+        }
+
+    </style>
+</header>
+
+<body style="background-color:grey;">
+    <div id="wrapper"><!--this div holds and "wraps around/together" all content on the page-->
+
+        <h1>joshua hart</h1>
+
+        <!--NAVIGATION----------------------------------->
+
+        <div id="nav">
+
+    
+        
+
+           
+
+            <!--IN-PAGE links to different sections of th page-->
+            <a href="#bio">BIO</a>
+            <a href="#school">SCHOOLING</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#footer">Bottom of Page</a>
+
+        </div><!--/ #nav-->
+
+        <!--BIO SECTION--------------------------------->
+        <div id="bio"> 
+
+            <h2>About Me</h2>
+
+            <p>Hello my name is <b><u><i>joshua hart</i></u></b>. I am 27 years old. I was born on <b><u><i>april</i></u></b> 16 1996. my zodiac sign is aries. 
+                One of my favorite hobbies is to play sports.</p>
+
+            <br>
+            <br>
+
+            
+            
+            <!--link to image-->
+
+            <img src="images for bio/zodiac sign.webp" alt="zodiac sign" style="width:500px;">
+
+        </div><!--/ #bio-->
+
+        <!--SCHOOLING SECTION-->
+        <div id="school"> 
+
+            <h2>Schooling</h2>
+
+            <ol>
+
+                <li>cedi middle school </li>
+                <li>william B cooley high school</li>
+                <li>neit</li>
+               
+                <br>
+
+                <p><a href="https://www.neit.edu/">Visit Neit!</a></p>
+                
+
+
+
+
+
+            </ol>
+
+            <img src="images for bio/neit.jpg" alt="neit " style="width:500px;">
+
+          
+        </div><!--/ #school-->
+
+        <!--HOBBIES SECTION-->
+
+        <div id="hobbies"> 
+            <h2>Hobbies</h2>
+
+            <ul>
+
+                <li>fishing </li>
+                <li>ride Motorbikes</li>
+                <li>play sports</li>
+
+            </ul>
+
+            <img src="images for bio/sports.jpg" alt="sports">
+
+
+            <br>
+            <br>
+        </div><!--/ #hobbies-->
+
+        <!--FOOTER SECTION----------------------------->
+
+        <div id="footer" >
+            <a href="#nav">Back to Top of Page</a>
+           
+            <br>
+
+        <!--VAIDATION IMAGE SCREENSHOT below-->
+        <img src="images for bio/validation.png" alt="validation screenshot" width="50">
+
+        </div><!--/ #footer-->
+    </div><!--/ #wrapper-->
+</body>
+</html>
