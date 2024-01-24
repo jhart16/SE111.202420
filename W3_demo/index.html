@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta name="author" content="joshua hart">
+    <meta name="description" content="W3 demo multi page">
+   
+    <title>Multi page</title>
+
+    <!--in document-->
+    <style>
+        /*we write in css*/
+        div{
+            border:1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #wrapper{
+            background-color: lightseagreen;
+        }
+
+        .bg {
+            background-color: darkslategray;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .border {
+            border: 2px solid darkred;
+        }
+
+        #footer {
+            border: 3px solid black;
+        }
+
+    </style>
+
+
+</head>
+<body style="background-color: blue;">
+    
+
+    <div id="wrapper"><!--#wrapper----------------------------------------->
+
+
+  <!--header--------------------------------------->
+
+        <div id="header" class="border bg">
+
+            <h1 id="name"> Joel Miller</h1>
+            <h2 id="subtitle">the hero</h2>
+            <i>the last of us</i>
+
+
+    </div><!--/ #header--->
+
+    <!--nav----------------------------------------------->
+    <div id="nav">
+
+        <!--internal links:oages inside of websites-->
+        <!--relative paths-->
+        <a href="index.html">| &nbsp;HOME&nbsp;|</a>
+        <a href="Schools.html">|SCHOOLS|</a>
+        <a href="hobbies.html">|HOBBIES|</a>
+
+        <br>
+
+        <!--internl jump links:jumps to section based on #id of current page-->
+
+        <a href="#footer"> BOTTOM OF PAGES</a>
+
+        <br>
+
+        <!--external links:page outside of website-->
+        <!--absolute paths-->
+
+        <a href="https://www.hbo.com/the-last-of-us" target="_blank"> Official HBO Site |</a>
+
+
+    </div><!--nav-->
+
+    <!--page content-->
+    <div id="Page-content" class=border>
+
+        <h2><u>places</u></h2>
+
+
+    </div><!--page content-->
+
+    <!--footer------------------------------------------------------------------>
+
+    <div id="footer" class="border bg">
+
+        <a href="#header"> BACK TO TOP</a>
+        <p>&copy;Joshua hart | SE111 | 202420 |</p>
+
+        <!-- IMage of validation- uncomment out @ end-->
+    <!--
+
+        <img src="" alt="HOME" page validation screenshot" width="100%"
+
+    -->
+
+        </div><!--/ footer-->
+   
+    </div><!--/ #wrapper-->
+
+</body>
+</html>
