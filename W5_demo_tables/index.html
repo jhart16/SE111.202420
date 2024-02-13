@@ -20,33 +20,9 @@
 
     <h1>Birthday Part Form</h1>
 
-    <form>
-
-        <!--labels are used to match with input elements-->
-
-        <!--'for' attribute connects labels with the input values (matching 'name' atttribute value)-->
-
-        <label for="Parent/Guardian Name">parent/guardian name: </label>
-
-        <input type="text" name="firstName" id="firstName">
-
-        <br>
-
-        <label for="lastName">Last Name: </label>
-
-        <input type="text" name="lastName" id="lastName">
-
-        <br>
-
-        <label for="age">Age: </label>
-
-        <input type="text" name="age" id="age">
-
-    </form>
-
     <hr>
 
-    <h2>Form using a Table</h2>
+ 
 
     <form method="GET" action="">
 
@@ -72,7 +48,7 @@
 
                     <td>
 
-                        <h2>Inputs</h2>
+                        <h2>Form Fields</h2>
 
                     </td>
 
@@ -156,7 +132,7 @@
 
                     <td>
 
-                        <input type="number" name="age" id="age" placeholder="3" min="0" max="150">
+                        <input type="number" name="age"  placeholder="3" min="0" max="150">
 
                     </td>
 
@@ -256,7 +232,29 @@
                         
                     </td>
 
+
+                   
                 </tr>
+
+                <tr>
+                    <td>
+
+                        <!--since the checkboxes each have their own label, we will NOT include a for value here-->
+    
+                        <label><b>Food</b></label>
+    
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+
+
+                </tr>
+
+
+
 
                 <!--new row-->
 
@@ -284,7 +282,7 @@
 
                         <!--since the checkboxes each have their own label, we will NOT include a for value here-->
 
-                        <label><b>Food</b></label>
+                        <label>Drinks</label>
 
                     </td>
 
@@ -295,40 +293,37 @@
 
                     <td>
 
-                        <input type="checkbox" name="vehicle1" id="vehicle1" value="car">
+                        <input type="checkbox" name="drink1" checked="true" value="Coke">
 
-                        <label for="vehicle1">Car</label>
-
-                        <br>
-
-                        <input type="checkbox" name="vehicle2" id="vehicle2" value="motorcycle">
-
-                        <label for="vehicle2">Motorcycle</label>
+                        <label for="drink1">Coke</label>
 
                         <br>
 
-                        <input type="checkbox" name="vehicle3" id="vehicle3" value="bike">
+                        <input type="checkbox" name="drink2" value="Sprite">
 
-                        <label for="vehicle3">Bicycle</label>
-
-                        <br>
-
-                        <input type="checkbox" name="vehicle4" id="vehicle4" value="roci">
-
-                        <label for="vehicle4">The Rocinante</label>
+                        <label for="drink2">Sprite</label>
 
                         <br>
 
-                        <input type="checkbox" name="vehicle5" id="vehicle5" value="roach">
+                        <input type="checkbox" name="drink3"  value="Fruit Punch">
 
-                        <label for="vehicle5">Roach the Horse</label>
+                        <label for="drink3">Fruit punch</label>
 
                         <br>
 
-                        <input type="checkbox" name="vehicle6" id="vehicle6" value="dragon">
+                        <input type="checkbox" name="drink4"  value="Lemonade">
 
-                        <label for="vehicle6">Dragon!</label>
+                        <label for="drink4">Lemonade</label>
 
+                        <br>
+
+                        <input type="checkbox" name="drink5" value="Ice Tea">
+
+                        <label for="drink5">Ice Tea</label>
+
+                        <br>
+
+                        
                     </td>
 
                 </tr>
@@ -341,7 +336,7 @@
 
                     <td>
 
-                        <label for="date">Date:</label>
+                        <label for="Cake">Cake</label>
 
                     </td>
 
@@ -349,14 +344,60 @@
 
                     <td>
 
-                        <input type="date" name="date" id="date" required>
+                        <select> 
+                            <option>Chocolate</option>
+                            <option>Vanilla</option>
+                            <option>I'll bring my own</option>
+                        </select>
 
                     </td>
 
                 </tr>
 
-                <!--SUBMIT BUTTON - clicking checks that form is filled "corretly" (meets requirements) and then runs the action if present-->
+                
+                <tr>
+                    <td>
 
+                        <!--since the checkboxes each have their own label, we will NOT include a for value here-->
+    
+                        <label><b>Decorations</b></label>
+    
+                    </td>
+                    <td>
+
+                    </td>
+
+
+                </tr>
+
+                <td>
+
+                    <label for="Colors">Colors</label>
+
+                </td>
+
+                <td>
+                    <b>Choose a color scheme</b><br>
+
+                    <input type="color" name="color">
+                
+
+                </td>
+
+            
+
+                <tr>
+                    <td>
+                        <label for="Additional Comments"> Additional Comments</label>
+    
+                    </td>
+
+                    <td>
+                        <input type="text" placeholder="Please add any additional comment here" name="comment">
+                    </td>
+    
+    
+                </tr>
                 <!--new row-->
 
                 <tr>
