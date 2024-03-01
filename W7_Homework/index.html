@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FILL OUT THE MISSING INFO-->
+    <meta name="author" content="joshua hart">
+    <meta name="description" content="Description of your page">
+
+    <title>W7 | JS Pay Form</title>
+</head>
+<body>
+    <h1>W7 Javascript Pay Calculator Form</h1>
+
+    <!--FORM- Read through to get an idea of what your IDs are!-->
+    <form style="border:1px solid blue;">
+        <table>
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="first" class="questions">FIRST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="first" id="first">
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="last" class="questions">LAST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="last" id="last">
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="rate" class="questions">Rate: $</label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="rate" id="rate">
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="hours" class="questions">Hours: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="hours" id="hours">
+                </td>
+            </tr>
+            <!--FORM SUBMIT BUTTON-->
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <br>
+                    <br>
+                    <input type="button" id="enter-button" value="ENTER">
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!--these breaks are just for visual space-->
+    <br><br><br>
+
+    <h2>User's Information:</h2>
+    <!--BELOW IS WHERE YOUR USER'S INFO WILL GO!-->
+    <!--when you write your JS correctly, the form data will be written to the below space in your page-->
+    <div id="info" style="border:1px solid black; width:500px; height:200px;">
+    </div><!--# info-->
+
+    <p><i>After reviewing the above, click CONFIRM to submit your data!</i></p>
+    <!--CONFIRMATION BUTTON- when this is clicked and your JS is correct, your user will see an alert() with their information-->
+    <input type="button" id="confirm-button" value="CONFIRM!">
+
+     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
+     <script>
+        //PART1-----selecting and storing HTML elements------------
+        var body = document.querySelector('body');
+        var h1 = document.querySelector('h1');
+        var inputs = document.querySelectorAll('input');
+        var div = document.getElementById('info');
+        var enterButton = document.getElementById('enter-button');
+        var confirmButton = document.getElementById('confirm-button');
+
+        console.log(body, h1, inputs, div, enterButton, confirmButton);
+
+        //PART2------adding event listeners------------------------
+        enterButton.addEventListener('click', formData);
+        confirmButton.addEventListener('click', confirmData);
+
+        //PART3------building event functions----------------------
+        function formData(event) {
+            // Store input element values
+            var first = document.getElementById('first').value;
+            var last = document.getElementById('last').value;
+            var rate = parseFloat(document.getElementById('rate').value);
+            var hours = parseFloat(document.getElementById('hours').value);
+
+            // Create fullName
+            var fullName = `${first} ${last}`;
+
+            // Calculate grossPay, taxAmount, netPay
+            var grossPay = rate * hours;
+            var taxAmount = grossPay * 0.1;
+            var netPay = grossPay - taxAmount;
+
+            // Log values
+            console.log(`Full Name: ${fullName}`);
+            console.log(`Gross Pay: ${grossPay.toFixed(2)}`);
+            console.log(`Tax Amount: ${taxAmount.toFixed(2)}`);
+            console.log(`Net Pay: ${netPay.toFixed(2)}`);
+
+            // Write information to the #info div's innerHTML
+            div.innerHTML = `
+                <p><b>Full Name:</b> ${fullName}</p>
+                <p><b>Gross Pay:</b> $${grossPay.toFixed(2)}</p>
+                <p><b>Tax Amount:</b> $${taxAmount.toFixed(2)}</p>
+                <p><b>Net Pay:</b> $${netPay.toFixed(2)}</p>
+            `;
+        }
+
+        function confirmData(event) {
+            // Store input element values
+            var first = document.getElementById('first').value;
+            var last = document.getElementById('last').value;
+            var rate = parseFloat(document.getElementById('rate').value);
+            var hours = parseFloat(document.getElementById('hours').value);
+
+            
+            var fullName = `${first} ${last}`;
+
+            // Calculate grossPay, taxAmount, netPay
+            var grossPay = rate * hours;
+            var taxAmount = grossPay * 0.1;
+            var netPay = grossPay - taxAmount;
+
+            // Display information in alert
+            alert(
+                `Full Name: ${fullName}\n` +
+                `Gross Pay: $${grossPay.toFixed(2)}\n` +
+                `Tax Amount: $${taxAmount.toFixed(2)}\n` +
+                `Net Pay: $${netPay.toFixed(2)}`
+            );
+        }
+    </script>
+</body>
+</html>
