@@ -26,10 +26,11 @@
                 <td><input id="button" type="button" value="submit"></td>
             </tr>
         </table>
-    </div>
-    <div id="output">
-    </div>
+    <div>
+    <div id="output"></div>
 
+    <!--The script tag should go after the HTML, but inside of the body.-->
+    <!--JavaScript cannot find tags if they are not parsed before the script runs-->
     <script>
         // Store the elements (tags) in variables
         var firstInput = document.getElementById('first');
@@ -42,6 +43,21 @@
 
         // Make the button clickable. When clicked it calls the calcAndDisplay function.
         button.addEventListener('click', calcAndDisplay);
+
+        /*-----------------------------------------------------
+        Will add objects into the people array. 
+        Then will bubble sort the array and print each person to the screen.
+        The output should resemble: 
+            FIRST: Cersei
+            LAST: Lannister
+            _________________________
+            FIRST: Arya
+            LAST: Stark
+            _________________________
+            FIRST: Daenerys
+            LAST: Targaryen
+            _________________________
+        --------------------------------------------------------*/
 
         function calcAndDisplay(e) {
             // Create an object called person.
@@ -65,9 +81,9 @@
                         people[j + 1] = temp;
                     }
                 }
-            }
+            }//end of bubble sort algorithm!
 
-            // Create a variable called 'output' that has an empty string value stored to
+            // create a variable called 'output' that has an empty string value stored to 
             var output = '';
 
             // Loop through the objects in the people array
@@ -80,11 +96,11 @@
                     // LAST: Drago
                     output += key.toUpperCase() + ': ' + people[i][key] + '<br>';
                 }
-                // Add a <hr> to the output at the end of this outer loop so a horizontal rule is displayed in between each person being displayed to the screen.
+                // add a <hr> to the output at the end of this outer loop so a horizontal rule is displayed in between each person being displayed to the screen.
                 output += '_________________________<br>';
-            }
+            }//end of loop going through people array to edit 'output'
 
-            // Replace the outputDiv's inner HTML with the output string
+            // replace the outputDiv's inner HTML with the output string
             outputDiv.innerHTML = output;
         }
     </script>
