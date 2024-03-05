@@ -33,16 +33,16 @@
     <!--JavaScript cannot find tags if they are not parsed before the script runs-->
     <script>
         // Store the elements (tags) in variables
-        var firstInput = document.getElementById('first');
-        var lastInput = document.getElementById('last');
-        var button = document.getElementById('button');
-        var outputDiv = document.getElementById('output');
+        var firstInput = document.getElementById('first')
+        var lastInput = document.getElementById('last')
+        var button = document.getElementById('button')
+        var outputDiv = document.getElementById('output')
 
         // Make an array to store the people
-        var people = [];
+        var people = []
 
         // Make the button clickable. When clicked it calls the calcAndDisplay function.
-        button.addEventListener('click', calcAndDisplay);
+        button.addEventListener('click', calcAndDisplay)
 
         /*-----------------------------------------------------
         Will add objects into the people array. 
@@ -67,24 +67,24 @@
             var person = {
                 first: firstInput.value,
                 last: lastInput.value
-            };
+            }
 
             // Add the person object into the people array by using the .push() array method.
-            people.push(person);
+            people.push(person)
 
             // Bubble sort people on the last name
             for (let i = 0; i < people.length - 1; i++) {
                 for (let j = 0; j < people.length - 1; j++) {
                     if (people[j].last > people[j + 1].last) {
-                        let temp = people[j];
-                        people[j] = people[j + 1];
-                        people[j + 1] = temp;
+                        let temp = people[j]
+                        people[j] = people[j + 1]
+                        people[j + 1] = temp
                     }
                 }
             }//end of bubble sort algorithm!
 
             // create a variable called 'output' that has an empty string value stored to 
-            var output = '';
+            var output = ''
 
             // Loop through the objects in the people array
             for (let i = 0; i < people.length; i++) {
@@ -94,14 +94,14 @@
                     // Output will resemble:
                     // FIRST: Ivan
                     // LAST: Drago
-                    output += key.toUpperCase() + ': ' + people[i][key] + '<br>';
+                    output += key.toUpperCase() + ': ' + people[i][key] + '<br>'
                 }
                 // add a <hr> to the output at the end of this outer loop so a horizontal rule is displayed in between each person being displayed to the screen.
-                output += '_________________________<br>';
+                output += '_________________________<br>'
             }//end of loop going through people array to edit 'output'
 
             // replace the outputDiv's inner HTML with the output string
-            outputDiv.innerHTML = output;
+            outputDiv.innerHTML = output
         }
     </script>
     
